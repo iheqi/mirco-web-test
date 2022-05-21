@@ -1,0 +1,1 @@
+export { registerMicroApps } from './start.js';

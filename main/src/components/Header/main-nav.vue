@@ -42,7 +42,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { ref, nextTick, watch } from 'vue'
 import { NAV_LIST } from '../../const'
 import { headerState } from '../../store'
@@ -99,38 +99,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* img{
+* img {
   width: 100%;
   height: 100%;
 }
-.main-nav{
-  &-content{
+.main-nav {
+  &-content {
     width: 1200px;
     height: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
   }
-  &-container{
+  &-container {
     width: 100%;
     height: 90px;
-    background: linear-gradient(180deg, #3C6AFB 0%, #75CDFF 100%);
+    background: linear-gradient(180deg, #3c6afb 0%, #75cdff 100%);
   }
-  &-logo{
+  &-logo {
     width: 108px;
     height: 48px;
     opacity: 0;
   }
-  &-list{
+  &-list {
     margin: 0 136px 0 132px;
     font-size: 24px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #ffffff;
     display: flex;
     height: 100%;
     user-select: none;
 
-    &>div{
+    & > div {
       position: relative;
       margin-right: 30px;
       height: 100%;
@@ -138,27 +138,27 @@ export default {
       align-items: center;
       cursor: pointer;
     }
-    &>div:last-child{
+    & > div:last-child {
       margin-right: 0;
     }
   }
-  &-active:after{
-    content: '';
+  &-active:after {
+    content: "";
     width: 100%;
     height: 8px;
-    background: #F7B500;
+    background: #f7b500;
     position: absolute;
     bottom: 0;
     left: 0;
   }
-  &-search{
+  &-search {
     width: 260px;
     height: 40px;
-    background: linear-gradient(90deg, #F4F8FF 0%, #E0EBFF 100%) #FFFFFF;
+    background: linear-gradient(90deg, #f4f8ff 0%, #e0ebff 100%) #ffffff;
     border-radius: 8px;
     position: relative;
 
-    &-icon{
+    &-icon {
       width: 20px;
       height: 20px;
       position: absolute;
@@ -166,25 +166,25 @@ export default {
       left: 21px;
     }
 
-    &-input{
+    &-input {
       width: 170px;
       height: 100%;
       position: absolute;
       left: 41px;
 
-      &-fake{
+      &-fake {
         width: 100%;
         height: 100%;
         position: absolute;
         left: 0;
         top: 0;
         padding-left: 6px;
-        color: #61AEE9;
+        color: #61aee9;
         display: flex;
         align-items: center;
       }
 
-      input{
+      input {
         width: 100%;
         height: 100%;
         border: 0;
@@ -195,16 +195,16 @@ export default {
       }
     }
 
-    &-button{
+    &-button {
       width: 52px;
       height: 40px;
-      background: linear-gradient(90deg, #F4F8FF 0%, #E0EBFF 100%) #E0EBFF;
+      background: linear-gradient(90deg, #f4f8ff 0%, #e0ebff 100%) #e0ebff;
       border-radius: 0px 8px 8px 0px;
       position: absolute;
       top: 0;
       right: 0;
       font-size: 14px;
-      color: #0091FF;
+      color: #0091ff;
       line-height: 19px;
       display: flex;
       justify-content: center;

@@ -13,20 +13,20 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   name: 'index',
 };
 </script>
 
 <style lang="scss">
-.main-footer{
-  &-container{
+.main-footer {
+  &-container {
     width: 100%;
     height: 100px;
-    background: #F5F5F5;
+    background: #f5f5f5;
   }
-  &-content{
+  &-content {
     width: 1200px;
     height: 100%;
     margin: 0 auto;
@@ -35,19 +35,19 @@ export default {
     align-items: center;
     justify-content: center;
   }
-  &-url{
+  &-url {
     font-size: 14px;
-    color: #9E9E9E;
+    color: #9e9e9e;
     margin-bottom: 10px;
 
-    span{
+    span {
       font-size: 16px;
-      color: #A1A1A1;
+      color: #a1a1a1;
     }
   }
-  &-phone{
+  &-phone {
     font-size: 14px;
-    color: #9E9E9E;
+    color: #9e9e9e;
   }
 }
 </style>

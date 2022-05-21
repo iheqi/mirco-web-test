@@ -6,20 +6,20 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   name: 'loading'
 };
 </script>
 
 <style lang="scss">
-.micro-main-body-loading{
+.micro-main-body-loading {
   width: 112px;
   height: 84px;
   position: absolute;
   user-select: none;
 
-  &-wrapper{
+  &-wrapper {
     width: 100%;
     height: 100%;
     display: flex;
@@ -33,7 +33,7 @@ export default {
     margin: auto;
   }
 
-  img{
+  img {
     width: 100%;
     height: 100%;
   }

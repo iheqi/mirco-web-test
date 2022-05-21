@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { crumbsState } from '../../store'
 
 export default {
@@ -28,30 +28,30 @@ export default {
 </script>
 
 <style lang="scss">
-.main-crumb{
-  &-container{
+.main-crumb {
+  &-container {
     width: 100%;
     height: 20px;
     margin-top: 20px;
   }
-  &-content{
+  &-content {
     width: 1200px;
     height: 20px;
     margin: 0 auto;
     display: flex;
   }
-  &-item{
+  &-item {
     font-size: 14px;
     color: #666666;
     margin-right: 6px;
 
-    span{
+    span {
       display: inline-block;
       transform: scaleX(0.6);
     }
   }
 
-  &-item:last-child span{
+  &-item:last-child span {
     display: none;
   }
 }

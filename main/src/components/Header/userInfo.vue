@@ -29,7 +29,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { useRouter } from 'vue-router';
 import { unlogin } from '../../store/login'
 
@@ -51,71 +51,71 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* img{
+* img {
   width: 100%;
   height: 100%;
 }
-.main-user-info{
-  &-container{
+.main-user-info {
+  &-container {
     height: 40px;
     width: 100%;
     background: #393939;
   }
-  &-content{
+  &-content {
     width: 1200px;
     height: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
     font-size: 16px;
-    color: #EBEBEB;
+    color: #ebebeb;
   }
-  &-portrait{
+  &-portrait {
     width: 26px;
     height: 26px;
-    background: linear-gradient(to bottom, #90CFFF, #58A1FF);
+    background: linear-gradient(to bottom, #90cfff, #58a1ff);
     border: 1px solid transparent;
     border-radius: 50%;
     overflow: hidden;
 
-    img{
+    img {
       background: white;
     }
   }
-  &-detail, &-city{
+  &-detail,
+  &-city {
     display: flex;
     align-items: center;
     cursor: pointer;
-
   }
-  &-arrow{
+  &-arrow {
     width: 7px;
     height: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  &-position{
+  &-position {
     width: 18px;
     height: 18px;
   }
-  &-text{
+  &-text {
     margin: 0 6px;
   }
 
-  &-detail{
+  &-detail {
     padding-right: 12px;
     margin-right: 12px;
     position: relative;
   }
-  &-detail:after{
-    content: '';
+  &-detail:after {
+    content: "";
     position: absolute;
     right: 0;
     top: 10px;
     width: 1px;
     height: 20px;
-    background: #D8D8D8;
+    background: #d8d8d8;
   }
 }
 </style>

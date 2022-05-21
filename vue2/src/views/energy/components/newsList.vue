@@ -74,7 +74,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import VTabs from '../../../components/v-tabs/index.vue'
 const rankCar = require('../../../assets/rank-car.png')
 import axios from 'axios'

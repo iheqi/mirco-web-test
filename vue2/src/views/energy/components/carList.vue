@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import axios from 'axios'
 export default {
   name: 'carList',
@@ -33,16 +33,15 @@ export default {
 </script>
 
 <style lang="scss">
-.car-list{
-  &-container{
+.car-list {
+  &-container {
     width: 100%;
     height: 153px;
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
-
   }
-  &-item{
+  &-item {
     width: 128px;
     display: flex;
     flex-direction: column;
@@ -50,7 +49,7 @@ export default {
     font-size: 14px;
     color: #333333;
 
-    img{
+    img {
       width: 128px;
       height: 96px;
     }

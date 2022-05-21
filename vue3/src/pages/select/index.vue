@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import LeftNav from './components/leftNav.vue'
 import selectDetail from './components/selectDetail.vue'
 export default {

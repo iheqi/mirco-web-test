@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { ref, watch } from 'vue'
 export default {
   name: 'pagination',

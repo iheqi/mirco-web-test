@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 const icon = require('../../../assets/car-detail-img.png')
 import pagination from './pagination.vue'
 const carData = {

@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 const newsList = [
   {
     text: '比亚迪新车“汉”上市预订考虑不周，预订者利益受者利益受者利益受',

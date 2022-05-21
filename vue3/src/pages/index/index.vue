@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { main } from '../../utils/global'
 import NavTitle from './components/navTitle.vue'
 import IndexAd from './components/ad.vue'
@@ -34,11 +34,11 @@ export default {
 </script>
 
 <style lang="scss">
-.index{
-  &-container{
+.index {
+  &-container {
     width: 100%;
   }
-  &-content{
+  &-content {
     width: 1200px;
     margin: 40px auto 0;
   }

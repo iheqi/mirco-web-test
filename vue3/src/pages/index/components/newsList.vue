@@ -80,7 +80,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import VTabs from '../../../components/v-tabs/index.vue'
 import Recommend from './recommend.vue'
 const rankCar = require('../../../assets/rank-car.png')

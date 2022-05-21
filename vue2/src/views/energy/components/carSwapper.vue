@@ -67,7 +67,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   name: 'car-swapper',
   data () {
@@ -110,13 +110,13 @@ export default {
 </script>
 
 <style lang="scss">
-.car-swapper{
-  &-container{
+.car-swapper {
+  &-container {
     width: 100%;
     height: 354px;
     display: flex;
   }
-  &-detail{
+  &-detail {
     width: 738px;
     height: 100%;
     position: relative;
@@ -125,43 +125,44 @@ export default {
     width: 100%;
     height: 100%;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
   }
-  &-left-arrow, &-right-arrow{
+  &-left-arrow,
+  &-right-arrow {
     width: 34px;
     height: 70px;
     position: absolute;
     top: 120px;
     cursor: pointer;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
   }
-  &-left-arrow{
+  &-left-arrow {
     left: 10px;
   }
-  &-right-arrow{
+  &-right-arrow {
     right: 10px;
   }
-  &-ad-wrapper{
+  &-ad-wrapper {
     width: 100%;
     height: 70px;
     background: #000000;
     opacity: 0.59;
     font-size: 26px;
-    color: #FFFFFF;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom:0;
+    bottom: 0;
   }
-  &-index{
+  &-index {
     width: 100%;
     display: flex;
     padding-right: 10px;
@@ -169,7 +170,7 @@ export default {
     justify-content: flex-end;
     bottom: 80px;
 
-    span{
+    span {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -178,21 +179,21 @@ export default {
       height: 20px;
       font-size: 16px;
       font-weight: 500;
-      color: #FFFFFF;
+      color: #ffffff;
       cursor: pointer;
     }
-    &-active{
-      background: #FF7819;
+    &-active {
+      background: #ff7819;
     }
-    &-normal{
+    &-normal {
       background: #464646;
     }
   }
-  &-news{
+  &-news {
     flex: 1;
     margin-left: 40px;
 
-    &-title{
+    &-title {
       font-size: 20px;
       color: #333333;
       overflow: hidden;
@@ -200,7 +201,7 @@ export default {
       white-space: nowrap;
     }
 
-    &-item{
+    &-item {
       height: 21px;
       margin-top: 20px;
       padding-left: 14px;
@@ -210,18 +211,17 @@ export default {
       font-size: 16px;
       position: relative;
     }
-    &-item:after{
-      content: '';
+    &-item:after {
+      content: "";
       display: block;
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #C3C3C3;
+      background: #c3c3c3;
       position: absolute;
       top: 7px;
       left: 0;
     }
   }
-
 }
 </style>

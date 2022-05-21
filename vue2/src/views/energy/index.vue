@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import VTabs from '../../components/v-tabs/index.vue'
 import CarList from './components/carList.vue'
 import CarSwapper from './components/carSwapper.vue'
@@ -41,11 +41,11 @@ export default {
 </script>
 
 <style lang="scss">
-.energy{
-  &-container{
+.energy {
+  &-container {
     width: 100%;
   }
-  &-content{
+  &-content {
     width: 1200px;
     margin: 0 auto;
   }

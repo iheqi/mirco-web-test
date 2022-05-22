@@ -13,6 +13,9 @@ export const lifeCycle = async () => {
   }
 
   if (prevApp) {
+    if (prevApp.proxy) {
+      prevApp.proxy.inactive();
+    }
     // 卸载上一个应用
     unmount(prevApp);
   }

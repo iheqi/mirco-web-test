@@ -19,8 +19,9 @@ export async function bootstrap() {
 }
 
 export async function mount(app) {
+  window.a = 1; // test snapshot
   setMain(app) // 记录主应用传过来的方法
-  console.log('react mount')
+  console.log('react mount');
   render();
 }
 

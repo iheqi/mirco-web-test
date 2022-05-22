@@ -11,7 +11,7 @@ const render = () => {
 }
 
 if (!window.__MICRO_WEB__) {
-  render()
+  render();
 }
 
 export async function bootstrap() {
@@ -21,7 +21,7 @@ export async function bootstrap() {
 export async function mount(app) {
   setMain(app) // 记录主应用传过来的方法
   console.log('react mount')
-  render()
+  render();
 }
 
 export async function unmount(ctx) {

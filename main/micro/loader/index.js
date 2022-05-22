@@ -1,16 +1,16 @@
 import { fetchResoure } from '../util/fetchResoure';
-import { performScript } from '../sandbox/performScript';
+// import { performScript } from '../sandbox/performScript';
+import { sandbox } from '../sandbox';
 
 export const htmlLoader = async (app) => {
-  // window.__MICRO_WEB__ = true;
   const { container, entry } = app;
   const [dom, allScript] = await parseHtml(entry, app);
-  console.log('allScript', allScript);
   const ct = document.querySelector(container);
   ct.innerHTML = dom;
 
   allScript.map((item) => {
-    performScript(item);
+    // performScript(item);
+    sandbox(app, item);
   });
 
   return app;
@@ -24,7 +24,6 @@ export const parseHtml = async (entry, app) => {
   div.innerHTML = html;
 
   const [dom, scriptUrls, scripts] = await getResources(div, app);
-  console.log(dom, scriptUrls, scripts);
 
   const fetchedScripts = await Promise.all(scriptUrls.map(url => fetchResoure(url)));
   const allScript = scripts.concat(fetchedScripts);

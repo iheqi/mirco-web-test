@@ -20,7 +20,6 @@ export async function bootstrap() {
 }
 
 export async function mount(app) {
-  console.log('fuck !!!');
   setMain(app);
   render();
 }

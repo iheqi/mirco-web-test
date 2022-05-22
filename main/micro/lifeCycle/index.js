@@ -2,7 +2,7 @@ import { findAppByRoute } from '../util';
 import { getMainLifeCycle } from '../const/mainLifeCycle';
 import { htmlLoader } from '../loader';
 
-export const lifeCycle = () => {
+export const lifeCycle = async () => {
   const prevApp = findAppByRoute(window.__ORIGIN_APP__);
   const nextApp = findAppByRoute(window.__CURRENT_SUB_APP__);
 
@@ -18,7 +18,7 @@ export const lifeCycle = () => {
   }
 
   // 挂载新应用
-  const app = beforeLoad(nextApp);
+  const app = await beforeLoad(nextApp);
   mount(app);
 }
 
@@ -32,6 +32,7 @@ export const beforeLoad = async (app) => {
 
 // 挂载
 export const mount = async (app) => {
+  console.log('app!!!', app);
   app && app.mount && await app.mount(app);
 
   await runMainLifeCycle('mounted', app)

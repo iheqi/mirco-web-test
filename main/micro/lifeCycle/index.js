@@ -1,5 +1,6 @@
 import { findAppByRoute } from '../util';
 import { getMainLifeCycle } from '../const/mainLifeCycle';
+import { htmlLoader } from '../loader';
 
 export const lifeCycle = () => {
   const prevApp = findAppByRoute(window.__ORIGIN_APP__);
@@ -16,10 +17,17 @@ export const lifeCycle = () => {
     unmount(prevApp);
   }
 
-  if (nextApp) {
-    // 挂载新应用
-    mount(nextApp);
-  }
+  // 挂载新应用
+  const app = beforeLoad(nextApp);
+  mount(app);
+}
+
+export const beforeLoad = async (app) => {
+  app && app.beforeLoad && await app.beforeLoad(app);
+  await runMainLifeCycle('beforeLoad', app)
+
+  const appContext = await htmlLoader(app);
+  return appContext;
 }
 
 // 挂载

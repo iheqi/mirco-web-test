@@ -26,5 +26,4 @@ export const start = () => {
 
   // 将当前子应用做标记
   window.__CURRENT_SUB_APP__ = app.activeRule;
-  console.log('app', app);
 }

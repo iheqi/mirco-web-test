@@ -6,7 +6,7 @@ import { registerMicroApps, start } from '../../micro';
 
 export const starMicroApp = () => {
   registerMicroApps(leftNav.navList,
-    // 生命周期
+    // 主应用生命周期
     {
       beforeLoad: [
         () => {

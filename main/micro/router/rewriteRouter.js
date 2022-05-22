@@ -3,7 +3,7 @@ import { turnApp } from './routerHandler';
 
 export const rewriteRouter = () => {
   window.history.pushState = patchRouter(window.history.pushState, 'micro_push');
-  window.history.replaceState = patchRouter(window.history.replaceState, 'micro_replace');
+  window.history.replaceState = patchRouter(window.history.replaceState, 'micro_replace'); // 为什么router.push时也会触发？
 
   // 添加路由跳转事件监听
   window.addEventListener('micro_push', turnApp);

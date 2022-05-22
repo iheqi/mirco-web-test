@@ -1,1 +1,1 @@
-export { registerMicroApps } from './start.js';
+export { registerMicroApps, start } from './start.js';

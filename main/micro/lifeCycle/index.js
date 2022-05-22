@@ -39,7 +39,7 @@ export const mount = async (app) => {
 
 // 卸载
 export const unmount = async (app) => {
-  app && app.unmount && await app.unmount(app); // 执行子应用的unmount
+  app && app.unmount && await app.unmount(app); // 执行子应用的unmount，定义在子应用的main.js
 
   await runMainLifeCycle('destoryed', app)
 }

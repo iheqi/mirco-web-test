@@ -20,7 +20,8 @@ export async function bootstrap() {
 }
 
 export async function mount(app) {
-  setMain(app)
+  console.log('fuck !!!');
+  setMain(app);
   render();
 }
 
@@ -29,6 +30,6 @@ export async function unmount(ctx) {
   instance = null;
   const { container } = ctx
   if (container) {
-    document.querySelector(container).innerHTML = ''
+    document.querySelector(container).innerHTML = '';
   }
 }

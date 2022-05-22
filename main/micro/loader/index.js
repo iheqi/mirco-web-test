@@ -1,11 +1,17 @@
 import { fetchResoure } from '../util/fetchResoure';
+import { performScript } from '../sandbox/performScript';
 
 export const htmlLoader = async (app) => {
+  // window.__MICRO_WEB__ = true;
   const { container, entry } = app;
   const [dom, allScript] = await parseHtml(entry, app);
   console.log('allScript', allScript);
   const ct = document.querySelector(container);
   ct.innerHTML = dom;
+
+  allScript.map((item) => {
+    performScript(item);
+  });
 
   return app;
 }

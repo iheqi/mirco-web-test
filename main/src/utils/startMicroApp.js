@@ -5,7 +5,25 @@ import { leftNav } from '../store';
 import { registerMicroApps, start } from '../../micro';
 
 export const starMicroApp = () => {
-  registerMicroApps(leftNav.navList);
+  registerMicroApps(leftNav.navList,
+    // 生命周期
+    {
+      beforeLoad: [
+        () => {
+          console.log('开始加载 -- ');
+        },
+      ],
+      mounted: [
+        () => {
+          console.log('加载完成 -- ');
+        },
+      ],
+      destoryed: [
+        () => {
+          console.log('卸载完成 -- ');
+        },
+      ],
+    });
   start();
 }
 

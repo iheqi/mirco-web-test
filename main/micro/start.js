@@ -1,11 +1,13 @@
 import { getList, setList } from './const/subApps';
+import { setMainLifeCycle } from './const/mainLifeCycle';
 import { rewriteRouter } from './router/rewriteRouter';
 import { currentApp } from './util';
 
 rewriteRouter();
 
-export const registerMicroApps = (appList) => {
+export const registerMicroApps = (appList, lifeCycle) => {
   setList(appList);
+  setMainLifeCycle(lifeCycle);
 }
 
 export const start = () => {

@@ -9,10 +9,9 @@ const Login = () => {
 
   useEffect(() => {
     // 登录页面隐藏头部底部
-    main.appInfo.footerState.changeFooter(false)
-
-    main.appInfo.headerState.changeHeader(false)
-    main.appInfo.crumbsState.setCrumbs([])
+    main.appInfo.footerState.changeFooter(false);
+    main.appInfo.headerState.changeHeader(false);
+    main.appInfo.crumbsState.setCrumbs([]);
   }, [])
 
   return (

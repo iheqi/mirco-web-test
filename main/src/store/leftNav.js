@@ -1,6 +1,6 @@
-import * as loading from './loading'
+import * as loading from './loading';
 
-import * as appInfo from '../store'
+import * as appInfo from '../store';
 
 export const navList = [
   {

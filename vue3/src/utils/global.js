@@ -1,5 +1,5 @@
-export let main = {}
+export let main = {};
 
 export const setMain = (data) => {
-  main = data
+  main = data;
 }

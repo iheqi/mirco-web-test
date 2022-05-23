@@ -21,12 +21,12 @@ export async function bootstrap() {
 export async function mount(app) {
   window.a = 1; // test snapshot
   setMain(app) // 记录主应用传过来的方法
-  console.log('react mount');
+  console.log('react15 mount');
   render();
 }
 
 export async function unmount(ctx) {
-  console.log('react unmout')
+  console.log('react15 unmout')
   const { container } = ctx
   if (container) {
     document.querySelector(container).innerHTML = ''

@@ -18,7 +18,7 @@ export async function bootstrap() {
 
 export async function mount(app) {
   setMain(app)
-  console.log('react mount')
+  console.log('react16 mount')
   render()
 
 
@@ -32,7 +32,7 @@ export async function mount(app) {
 }
 
 export async function unmount(ctx) {
-  console.log('react unmout')
+  console.log('react16 unmout')
   const { container } = ctx
   if (container) {
     document.querySelector(container).innerHTML = ''

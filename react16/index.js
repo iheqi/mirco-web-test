@@ -17,9 +17,17 @@ export async function bootstrap() {
 }
 
 export async function mount(app) {
-  setMain(app)
-  console.log('react16 mount')
-  render()
+  setMain(app);
+  console.log('react16 mount');
+
+  const storeData = window.store.getStore();
+
+  window.store.update({
+    ...storeData,
+    a: 10
+  });
+
+  render();
 
 
   // setTimeout(() => {

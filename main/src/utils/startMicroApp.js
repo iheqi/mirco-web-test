@@ -2,7 +2,20 @@ import { leftNav } from '../store';
 // import { leftNav, headerState, footerState } from '../store';
 
 // import { registerMicroApps, start } from 'test-micro-web';
-import { registerMicroApps, start } from '../../micro';
+import { registerMicroApps, start, creatStore } from '../../micro';
+
+const store = creatStore();
+const storeData = store.getStore();
+
+window.store = store;
+store.subscribe((newValue, oldValue) => {
+  console.log(newValue, oldValue);
+});
+
+store.update({
+  ...storeData,
+  a: 1
+});
 
 export const starMicroApp = () => {
   registerMicroApps(leftNav.navList,

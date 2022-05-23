@@ -2,6 +2,7 @@ import { getList, setList } from './const/subApps';
 import { setMainLifeCycle } from './const/mainLifeCycle';
 import { rewriteRouter } from './router/rewriteRouter';
 import { currentApp } from './util';
+import { prefetch } from './loader/prefetch';
 
 rewriteRouter();
 
@@ -22,8 +23,10 @@ export const start = () => {
     const url = pathname + hash;
 
     window.history.pushState(url, app.name, url || app.activeRule);
+    // 将当前子应用做标记
+    window.__CURRENT_SUB_APP__ = app.activeRule;
   }
 
-  // 将当前子应用做标记
-  window.__CURRENT_SUB_APP__ = app.activeRule;
+  // 加载完当前子应用后，其他子应用可以先预加载
+  prefetch();
 }

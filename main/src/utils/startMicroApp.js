@@ -1,8 +1,8 @@
 import { leftNav } from '../store';
 // import { leftNav, headerState, footerState } from '../store';
 
-// import { registerMicroApps, start } from 'test-micro-web';
-import { registerMicroApps, start, creatStore } from '../../micro';
+import { registerMicroApps, start, creatStore } from 'test-micro-web';
+// import { registerMicroApps, start, creatStore } from '../../micro';
 
 const store = creatStore();
 const storeData = store.getStore();

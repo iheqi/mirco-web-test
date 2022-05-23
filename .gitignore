@@ -1,7 +1,7 @@
 .DS_Store
 */node_modules
-/dist
-
+*/dist
+platform/bag/vue3
 
 # local env files
 .env.local

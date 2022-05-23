@@ -2,6 +2,8 @@ import { fetchResoure } from '../util/fetchResoure';
 // import { performScript } from '../sandbox/performScript';
 import { sandbox } from '../sandbox';
 
+const cache = {};
+
 export const htmlLoader = async (app) => {
   const { container, entry } = app;
   const [dom, allScript] = await parseHtml(entry, app);
@@ -17,6 +19,10 @@ export const htmlLoader = async (app) => {
 }
 
 export const parseHtml = async (entry, app) => {
+  if (cache[app.name]) { // 缓存请求到的script，感觉有点粗暴
+    return cache[app.name];
+  }
+
   const html = await fetchResoure(entry);
   // console.log(html);
 
@@ -27,7 +33,7 @@ export const parseHtml = async (entry, app) => {
 
   const fetchedScripts = await Promise.all(scriptUrls.map(url => fetchResoure(url)));
   const allScript = scripts.concat(fetchedScripts);
-
+  cache[app.name] = [dom, allScript];
   // console.log('fetchedScripts', fetchedScripts);
   return [dom, allScript];
 }

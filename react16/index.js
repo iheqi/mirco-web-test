@@ -8,12 +8,12 @@ export const render = () => {
   ReactDOM.render(<BasicMap />, document.getElementById('app-react'))
 }
 
-if (!window.__MICRO_WEB__) {
+if (!window.__POWERED_BY_QIANKUN__) {
   render()
 }
 
 export async function bootstrap() {
-  console.log('react bootstrap')
+  console.log('react16 bootstrap')
 }
 
 export async function mount(app) {
@@ -40,7 +40,7 @@ export async function mount(app) {
 }
 
 export async function unmount(ctx) {
-  console.log('react16 unmout')
+  console.log('react16 unmount')
   const { container } = ctx
   if (container) {
     document.querySelector(container).innerHTML = ''

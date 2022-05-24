@@ -3,14 +3,16 @@
 #### 启动主应用
 ```shell script
 cd main # 进入到主项目
-npm run serve # 启动项目
+npm run start # 启动项目
 ```
 
 #### 启动子应用
+micro_web_test 目录下运行：
+
 ```shell script
-# micro_web_test 目录下
 npm start 
 ```
+包括service应用也会启动。
 
 #### 项目介绍
 

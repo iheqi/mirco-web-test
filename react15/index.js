@@ -10,12 +10,12 @@ const render = () => {
   ), document.getElementById('app-react'))
 }
 
-if (!window.__MICRO_WEB__) {
+if (!window.__POWERED_BY_QIANKUN__) {
   render();
 }
 
 export async function bootstrap() {
-  console.log('react bootstrap')
+  console.log('react15 bootstrap')
 }
 
 export async function mount(app) {
@@ -25,10 +25,7 @@ export async function mount(app) {
   render();
 }
 
-export async function unmount(ctx) {
-  console.log('react15 unmout')
-  const { container } = ctx
-  if (container) {
-    document.querySelector(container).innerHTML = ''
-  }
+export async function unmount(props) {
+  const { container } = props;
+  ReactDOM.unmountComponentAtNode(container ? container.querySelector('#root') : document.querySelector('#root'));
 }

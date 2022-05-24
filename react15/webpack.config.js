@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
+const { name } = require('./package.json');
 module.exports = {
   entry: {
     path: ['./index.js']
@@ -12,7 +12,8 @@ module.exports = {
     library: 'react15',
     libraryTarget: 'umd',
     umdNamedDefine: true,
-    publicPath: 'http://localhost:9002/'
+    publicPath: 'http://localhost:9002/',
+    jsonpFunction: `webpackJsonp_${name}`
   },
   module: {
     rules: [

@@ -10,7 +10,7 @@ console.log(instance);
 export async function bootstrap() {
   console.log('vue app bootstraped');
 }
-if (!window.__MICRO_WEB__) {
+if (!window.__POWERED_BY_QIANKUN__) {
   instance = new Vue({
     router,
     store,

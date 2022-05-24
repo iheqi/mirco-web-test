@@ -12,7 +12,7 @@ function render() {
     .mount('#app');
 }
 
-if (!window.__MICRO_WEB__) {
+if (!window.__POWERED_BY_QIANKUN__) {
   render();
 }
 export async function bootstrap() {
@@ -21,6 +21,7 @@ export async function bootstrap() {
 
 export async function mount(app) {
   setMain(app);
+  console.log('vue3.0 app mount', app);
   render();
 }
 
@@ -29,6 +30,7 @@ export async function unmount(ctx) {
   instance = null;
   const { container } = ctx
   if (container) {
-    document.querySelector(container).innerHTML = '';
+    container.innerHTML = '';
   }
+  console.log('vue3.0 app unmount');
 }

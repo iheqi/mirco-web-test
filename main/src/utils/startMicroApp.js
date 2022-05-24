@@ -3,7 +3,7 @@ import { leftNav } from '../store';
 
 // import { registerMicroApps, start, creatStore } from 'test-micro-web';
 // import { registerMicroApps, start, creatStore } from '../../micro';
-import { registerMicroApps, start } from 'qiankun';
+import { registerMicroApps, start, initGlobalState } from 'qiankun';
 
 // const store = creatStore();
 // const storeData = store.getStore();
@@ -17,6 +17,11 @@ import { registerMicroApps, start } from 'qiankun';
 //   ...storeData,
 //   a: 1
 // });
+
+initGlobalState({
+  a: 1,
+  b: 2
+});
 
 export const starMicroApp = () => {
   registerMicroApps(leftNav.navList,

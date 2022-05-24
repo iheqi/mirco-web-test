@@ -19,9 +19,24 @@ export async function bootstrap() {
   console.log('vue3.0 app bootstrap');
 }
 
-export async function mount(app) {
-  setMain(app);
-  console.log('vue3.0 app mount', app);
+export async function mount(props) {
+  setMain(props);
+  console.log('vue3.0 app mount', props);
+  // https://qiankun.umijs.org/zh/api#initglobalstatestate
+  props.onGlobalStateChange((state, prev) => {
+    // state: 变更后的状态; prev 变更前的状态
+    console.log('onGlobalStateChange', state, prev);
+  });
+  setTimeout(() => {
+    props.setGlobalState({
+      a: 2,
+      b: 3
+    });
+    // props.setGlobalState({ // state has not changed！
+    //   c: 1,
+    // });
+
+  }, 2000);
   render();
 }
 

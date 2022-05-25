@@ -1,34 +1,34 @@
-import { createApp } from 'vue';
+import { createApp, h } from 'vue';
 import App from './App.vue';
 import router from './router';
-import { setMain } from './utils/global';
+import singleSpaVue from 'single-spa-vue';
 
-let instance = null;
 
 function render() {
-  instance = createApp(App);
-  instance
+  createApp(App)
     .use(router)
     .mount('#app');
 }
 
-if (!window.__MICRO_WEB__) {
-  render();
-}
-export async function bootstrap() {
-  console.log('vue3.0 app bootstrap');
-}
-
-export async function mount(app) {
-  setMain(app);
+if (!window.singleSpaNavigate) {
   render();
 }
 
-export async function unmount(ctx) {
-  instance.unmount();
-  instance = null;
-  const { container } = ctx
-  if (container) {
-    document.querySelector(container).innerHTML = '';
+const vueLifecycles = singleSpaVue({
+  createApp,
+  appOptions: {
+    render() {
+      h(App, {
+        props: {}
+      })
+    }
+  },
+  handleInstance(instance) {
+    instance.use(router);
   }
-}
+});
+
+export const bootstrap = vueLifecycles.bootstrap;
+export const mount = vueLifecycles.mount;
+export const unmount = vueLifecycles.unmount;
+
